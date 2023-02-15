@@ -14,11 +14,11 @@ export default async function handler(req, res) {
             currPoke = currPoke.evolves_to[0];
         }
 
-        let evolves = currPoke.species.name
+        let evolution = currPoke.species.name
         if (currPoke.evolves_to[0]) {
-            evolves = currPoke.evolves_to[0].species.name
+            evolution = currPoke.evolves_to[0].species.name
         }
-        return res.status(200).json(evolves);
+        return res.status(200).json({ evolution });
     } catch (e) {
         console.log('NO POKEMON FOUND')
         return res.status(400).json(e);
