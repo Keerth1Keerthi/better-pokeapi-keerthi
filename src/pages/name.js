@@ -4,12 +4,11 @@ import Link from 'next/link'
 
 const fetcher = async (url) => {
     const res = await axios.get(url)
-    console.log(res.data)
     return res.data
 }
 
 export default function Name() {
-    let { data, error, isLoading, isValidating } = useSWR("/api/pokemon/pikachu", fetcher)
+    let { data, error, isLoading, isValidating } = useSWR("/api/pokemon/ditto", fetcher)
 
     if (isLoading) return <div>Loading</div>
     if (!data) return (
