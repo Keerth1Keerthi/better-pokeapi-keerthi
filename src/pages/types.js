@@ -24,14 +24,19 @@ export default function Types() {
     return (
         <>
             <Link href="/"><h1>Better PokeAPI</h1></Link>
-            {isValidating ? (
-                <h2>Validating</h2>
-            ) : (
-                <>
-                    <h2>Type: {type}</h2>
-                    <ul>{pokemon.map(poke => <li>{poke}</li>)}</ul>
-                </>
-            )}
+            <div className='container mt-7 grid grid-cols-9'>
+                {isValidating ? (
+                    <h2>Validating</h2>
+                ) : (
+                    <>
+                        <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-4 col-span-3'>
+
+                            <h2 className='text-2xl text-black-700 mb-3 text-center font-bold underline block'>Type: {type}</h2>
+                            <ul>{pokemon.map(poke => <li className='text-center'>{poke}</li>)}</ul>
+                        </div>
+                    </>
+                )}
+            </div>
         </>
     )
 }
