@@ -22,16 +22,22 @@ export default function Exp() {
 
     return (
         <>
+
             <Link href="/"><h1>Better PokeAPI</h1></Link>
-            <h2>Name: {name}</h2>
-            <h2>Level: {level}</h2>
-            {isValidating ? (
-                <h2>Validating</h2>
-            ) : (
-                <>
-                    <h2>Experience: {experience}</h2>
-                </>
-            )}
+            <div className='container mt-7 grid grid-cols-9'>
+                <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-4 col-span-3'>
+
+                    <h2>Name: {name}</h2>
+                    <h2>Level: {level}</h2>
+                    {isValidating ? (
+                        <h2>Validating</h2>
+                    ) : (
+                        <>
+                            <h2>Experience: {experience}</h2>
+                        </>
+                    )}
+                </div>
+            </div>
         </>
     )
 }
