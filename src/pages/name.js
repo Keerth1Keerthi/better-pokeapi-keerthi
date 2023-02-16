@@ -24,15 +24,20 @@ export default function Name() {
     return (
         <>
             <h1><Link href="/">Better PokeAPI</Link></h1>
-            {isValidating ? (
-                <h2>Validating</h2>
-            ) : (
-                <>
-                    <h2>Name: {pokemonName}</h2>
-                    <img src={sprite} />
-                    <h2>Types: {types.map(type => <span>{type} </span>)}</h2>
-                </>
-            )}
+            <div className='container mt-7 grid grid-cols-9'>
+                {isValidating ? (
+                    <h2>Validating</h2>
+                ) : (
+                    <>
+                        <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-4 col-span-3'>
+
+                            <h2 className='text-2xl text-black-700 mb-3 text-center font-bold underline'>Name: {pokemonName}</h2>
+                            <img src={sprite} />
+                            <h2 className='text-lg text-center'>Types: {types.map(type => <span className='rounded-md bg-gray-100 px-2 py-1 m-1 text-black-400 text-sm'>{type} </span>)}</h2>
+                        </div>
+                    </>
+                )}
+            </div>
         </>
     )
 }
