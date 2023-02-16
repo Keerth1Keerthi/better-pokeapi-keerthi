@@ -31,9 +31,7 @@ export default function Random() {
                         <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-4 col-span-3'>
 
                             <h2 className='text-2xl text-black-700 mb-3 text-center font-bold underline'>Name: {name}</h2>
-                            <div className='col-span-2 col-start-2'>
-                                <img src={sprite} className="max-w h-auto" />
-                            </div>
+                            <img src={sprite} className="mx-auto" />
                             <h2 className='text-lg text-center'>Types: {types.map(type => <span className="rounded-md bg-gray-100 px-2 py-1 m-1 text-black-400 text-sm">{type} </span>)}</h2>
 
                         </div>
