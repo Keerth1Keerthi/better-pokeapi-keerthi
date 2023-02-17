@@ -1,8 +1,9 @@
 import axios from 'axios'
 
 export default async function handler(req, res) {
-    const getRandomInt = () => Math.floor(Math.random() * 1008) + 1;
+    const getRandomInt = () => Math.floor(Math.random() * 1008 + 1);
     let randNum = getRandomInt(1, 1009)
+
     let url = 'https://pokeapi.co/api/v2/pokemon/' + randNum;
     try {
         let data = await axios.get(url);

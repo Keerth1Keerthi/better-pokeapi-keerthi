@@ -24,19 +24,24 @@ export default function Battle() {
     return (
         <>
             <Link href="/"><h1>Better PokeAPI</h1></Link>
-            <h2>Catching: {name}</h2>
+            <div className='container mt-7 grid grid-cols-9'>
+                <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-4 col-span-3'>
 
-            {isValidating ? (
-                <h2>Validating</h2>
-            ) : (
-                <>
-                    {caught ? (
-                        <h2>{name} has been caught!</h2>
+                    <h2>Catching: {name}</h2>
+
+                    {isValidating ? (
+                        <h2>Validating</h2>
                     ) : (
-                        <h2>{name} broke free!</h2>
+                        <>
+                            {caught ? (
+                                <h2>{name} has been caught!</h2>
+                            ) : (
+                                <h2>{name} broke free!</h2>
+                            )}
+                        </>
                     )}
-                </>
-            )}
+                </div>
+            </div>
         </>
     )
 }
