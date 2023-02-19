@@ -1,6 +1,8 @@
 import axios from 'axios'
 import useSWR from 'swr'
 import Link from 'next/link'
+import SearchBar from './components/SearchBar'
+import { useState } from 'react'
 
 const fetcher = async (url) => {
     const res = await axios.get(url)
@@ -8,9 +10,12 @@ const fetcher = async (url) => {
 }
 
 export default function Types() {
-    const type = "normal"
+    const [type, setType] = useState('normal')
+    const onSubmit = (type) => {
+        setType(type)
+    }
 
-    const { data, error, isLoading, isValidating } = useSWR(`/api/types/${type}`, fetcher)
+    const { data, error, isLoading, isValidating } = useSWR('/api/types/' + type, fetcher)
     if (isLoading) return <div>Loading</div>
     if (!data) return (
         <>
@@ -29,6 +34,7 @@ export default function Types() {
                     <h2>Validating</h2>
                 ) : (
                     <>
+                        <SearchBar onSubmit={onSubmit} />
                         <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-4 col-span-3'>
 
                             <h2 className='text-2xl text-black-700 mb-3 text-center font-bold underline block'>Type: {type}</h2>

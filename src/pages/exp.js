@@ -1,6 +1,7 @@
 import axios from 'axios'
 import useSWR from 'swr'
 import Link from 'next/link'
+import SearchBar from './components/SearchBar'
 
 const fetcher = async (url) => {
     const res = await axios.get(url)
@@ -8,8 +9,13 @@ const fetcher = async (url) => {
 }
 
 export default function Exp() {
-    const level = 5
-    const name = "pikachu"
+    const [name, setName] = useState('pikachu')
+    const [level, setLevel] = useState('5')
+
+    const onSubmit = (name, level) => {
+        setName(name)
+        setLevel(level)
+    }
     const { data, error, isLoading, isValidating } = useSWR(`/api/experience/${name}?level=${level}`, fetcher)
     if (isLoading) return <div>Loading</div>
     if (!data) return (
@@ -24,6 +30,7 @@ export default function Exp() {
         <>
 
             <Link href="/"><h1>Better PokeAPI</h1></Link>
+            <SearchBar onSubmit={onSubmit} useLevel={true} />
             <div className='container mt-7 grid grid-cols-9'>
                 <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-4 col-span-3'>
 

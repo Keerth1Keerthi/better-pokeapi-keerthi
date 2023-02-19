@@ -10,7 +10,7 @@ const fetcher = async (url) => {
 }
 
 export default function Name() {
-    const [name, setName] = useState('ditto')
+    const [name, setName] = useState('pikachu')
     const onSubmit = (name) => {
         setName(name)
     }

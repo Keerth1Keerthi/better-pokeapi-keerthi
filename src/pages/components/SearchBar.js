@@ -2,9 +2,10 @@ import { useState } from 'react'
 
 export default function SearchBar({ onSubmit }) {
     const [name, setName] = useState('')
+    const [level, setLevel] = useState(0)
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        onSubmit(name)
+        onSubmit(name, level)
     }
     const handleChange = (event) => {
         setName(event.target.value)
