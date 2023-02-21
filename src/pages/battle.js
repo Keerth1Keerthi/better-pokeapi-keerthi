@@ -3,10 +3,11 @@ import useSWR from 'swr'
 import Link from 'next/link'
 import { useState } from 'react'
 import SearchBar from './components/SearchBarBattle'
-const fetcher = async (url) => {
+const fetcher = async (url, pokemon1, pokemon2) => {
     const res = await axios.post(url, {
         pokemon1: pokemon1,
         pokemon2: pokemon2
+
     })
     return res.data
 }
@@ -18,7 +19,7 @@ export default function Battle() {
         setPokemon1(pokemon1)
         setPokemon2(pokemon2)
     }
-    const { data, error, isLoading, isValidating } = useSWR(`/api/battle/`, fetcher)
+    const { data, error, isLoading, isValidating } = useSWR([`/api/battle/`, pokemon1, pokemon2], ([url, pokemon1, pokemon2]) => fetcher(url, pokemon1, pokemon2))
     if (isLoading) return <div>Loading</div>
     if (!data) return (
         <>
@@ -35,7 +36,7 @@ export default function Battle() {
             <div className='container mt-7 grid grid-cols-9'>
                 <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-4 col-span-3'>
 
-                    <h2>Battle: Pikachu vs. Lucario</h2>
+                    <h2>Battle: {pokemon1} vs {pokemon2}</h2>
 
                     {isValidating ? (
                         <h2>Validating</h2>
