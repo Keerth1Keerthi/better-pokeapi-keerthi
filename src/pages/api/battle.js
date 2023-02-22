@@ -12,7 +12,7 @@ export default async function handler(req, res) {
         let pokemon2stats = 0;
         data.data.stats.forEach((stat) => pokemon2stats += stat.base_stat)
         let winner = pokemon1stats > pokemon2stats ? pokemon1 : pokemon2;
-        res.json({ winner: winner })
+        res.status(200).json({ winner: winner })
     } catch (e) {
         console.log('NO POKEMON FOUND', e.message)
         return res.status(400).json(e);

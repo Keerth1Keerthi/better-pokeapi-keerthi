@@ -34,11 +34,13 @@ export default function Types() {
                     <h2>Validating</h2>
                 ) : (
                     <>
-                        <SearchBar onSubmit={onSubmit} />
                         <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-4 col-span-3'>
 
                             <h2 className='text-2xl text-black-700 mb-3 text-center font-bold underline block'>Type: {type}</h2>
                             <ul>{pokemon.map(poke => <li className='text-center'>{poke}</li>)}</ul>
+                        </div>
+                        <div className='bg-white rounded overflow-hidden px-7 py-2 col-start-7 col-span-3 my-2'>
+                            <SearchBar onSubmit={onSubmit} term="Search Other Types" />
                         </div>
                     </>
                 )}

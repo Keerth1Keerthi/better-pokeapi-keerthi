@@ -14,10 +14,11 @@ export default function SearchBarExp({ onSubmit, currPokemon1, currPokemon2 }) {
         setPokemon2(event.target.value)
     }
     return <div>
-        <form onSubmit={handleFormSubmit}>
-            <input value={pokemon1} onChange={handlePoke1Change} className="border" />
-            <input value={pokemon2} onChange={handlePoke2Change} className="border" />
-            <button>Search</button>
+        <form onSubmit={handleFormSubmit} className="text-center">
+            <input value={pokemon1} onChange={handlePoke1Change} className="border py-1 px-2 rounded mx-0.5 mb-2 block w-full" />
+            <p>VS.</p>
+            <input value={pokemon2} onChange={handlePoke2Change} className="border py-1 px-2 rounded mx-0.5 mb-2 block w-full" />
+            <button className='bg-blue-700/100  hover:bg-blue-600/90 text-center text-white py-1 px-1 rounded mx-0.5'>Search</button>
         </form>
     </div>
 }

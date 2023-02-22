@@ -28,7 +28,6 @@ export default function Evolve() {
     return (
         <>
             <Link href="/"><h1>Better PokeAPI</h1></Link>
-            <SearchBar onSubmit={onSubmit} />
             <div className='container mt-7 grid grid-cols-9'>
                 <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-4 col-span-3'>
 
@@ -43,7 +42,9 @@ export default function Evolve() {
                         </>
                     )}
                 </div>
-
+                <div className='bg-white rounded shadow-md overflow-hidden px-7 py-2 col-start-4 col-span-3 my-2'>
+                    <SearchBar onSubmit={onSubmit} term="Search Other Pokemon" />
+                </div>
             </div>
         </>
     )

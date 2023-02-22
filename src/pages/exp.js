@@ -30,8 +30,7 @@ export default function Exp() {
         <>
 
             <Link href="/"><h1>Better PokeAPI</h1></Link>
-            <SearchBar onSubmit={onSubmit} currName={name} currLevel={level} />
-            <div className='container mt-7 grid grid-cols-9'>
+            <div className='container mt-7 grid grid-cols-9 mb-5'>
                 <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-4 col-span-3'>
 
                     <h2>Name: {name}</h2>
@@ -44,7 +43,10 @@ export default function Exp() {
                         </>
                     )}
                 </div>
+
             </div>
+            <SearchBar onSubmit={onSubmit} currName={name} currLevel={level} />
+
         </>
     )
 }

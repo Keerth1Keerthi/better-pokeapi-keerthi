@@ -30,7 +30,6 @@ export default function Name() {
     return (
         <>
             <h1><Link href="/">Better PokeAPI</Link></h1>
-            <SearchBar onSubmit={onSubmit} />
             <div className='container mt-7 grid grid-cols-9'>
                 {isValidating ? (
                     <h2>Validating</h2>
@@ -40,6 +39,9 @@ export default function Name() {
                             <h2 className='text-2xl text-black-700 mb-3 text-center font-bold underline'>Name: {pokemonName}</h2>
                             <img src={sprite} className="mx-auto" />
                             <h2 className='text-lg text-center'>Types: {types.map(type => <span className='rounded-md bg-gray-100 px-2 py-1 m-1 text-black-400 text-sm'>{type} </span>)}</h2>
+                        </div>
+                        <div className='bg-white rounded shadow-md overflow-hidden px-7 py-2 col-start-4 col-span-3 my-2'>
+                            <SearchBar onSubmit={onSubmit} term="Search Other Pokemon" />
                         </div>
                     </>
                 )}

@@ -32,9 +32,8 @@ export default function Battle() {
     return (
         <>
             <Link href="/"><h1>Better PokeAPI</h1></Link>
-            <SearchBar onSubmit={onSubmit} currPokemon1={pokemon1} currPokemon2={pokemon2} />
             <div className='container mt-7 grid grid-cols-9'>
-                <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-4 col-span-3'>
+                <div className='bg-white rounded overflow-hidden shadow-md px-7 py-5 col-start-2 col-span-3'>
 
                     <h2>Battle: {pokemon1} vs {pokemon2}</h2>
 
@@ -45,6 +44,9 @@ export default function Battle() {
                             <h2>Winner: {winner}</h2>
                         </>
                     )}
+                </div>
+                <div className='bg-white rounded shadow-md overflow-hidden px-7 py-2 col-start-6 col-span-3 my-2'>
+                    <SearchBar onSubmit={onSubmit} currPokemon1={pokemon1} currPokemon2={pokemon2} />
                 </div>
             </div>
         </>
