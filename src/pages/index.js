@@ -23,6 +23,7 @@ export default function Home() {
             <Link href="/exp" className='bg-red-200/100  hover:bg-red-200/50 text-center py-5'>Get a Pokemon's Experience</Link>
             <Link href="/battle" className='bg-red-200/100  hover:bg-red-200/50 text-center py-5'>Battle two Pokemon</Link>
             <Link href="/catch" className='bg-red-200/100  hover:bg-red-200/50 text-center py-5'>Try to catch a Pokemon</Link>
+            <Link href="/abilities" className='bg-red-200/100  hover:bg-red-200/50 text-center py-5'>Get a Pokemon's Abilities</Link>
           </div>
         </div>
       </div>
