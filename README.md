@@ -5,8 +5,7 @@ Create a backend that abstracts some aspects and combines features of the PokeAP
 
 ## Submission
 - Send the link to the repo containing your code in the #gt-bootcamp-dev Slack channel (there will be a thread for this later)
-- Create a less than 3 minute video walkthrough of your API
-Video Walkthrough: https://youtu.be/Wq_RztRnZPI
+- Create a less than 3 minute video walkthrough of your API, Video Walkthrough: https://youtu.be/Wq_RztRnZPI
 
 ## Requirements
 - Must accurately represent the demo
