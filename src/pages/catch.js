@@ -18,9 +18,6 @@ export default function Battle() {
     const onSubmit = (name, ball) => {
         setName(name)
         setBall(ball)
-        console.log('Name', name)
-        console.log('Ball', ball)
-        console.log('Submitted')
     }
 
     const { data, error, isLoading, isValidating } = useSWR([`/api/catch/`, name, ball], ([url, name, ball]) => fetcher(url, name, ball))

@@ -40,7 +40,7 @@ export default function Name() {
                             {abilities.map(ability => {
                                 return <>
                                     <h3 className='text-md my-1 mx-1 text-center rounded-md bg-lime-100 px-2 py-1 stext-black-400'>{ability.name}</h3>
-                                    <p className='text-sm text-black-400 text-center rounded-md bg-red-100 px-2 py-1 m-3'>{ability.description}</p>
+                                    <p className='text-sm text-black-400 text-center rounded-md bg-red-100 px-4 py-2 m-3'>{ability.description}</p>
                                 </>
                             })}
                         </div>
