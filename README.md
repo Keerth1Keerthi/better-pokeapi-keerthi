@@ -2,16 +2,6 @@
 
 A backend that abstracts some aspects and combines features of the PokeAPI. For instance, an endpoint that just gets the name, image, and type of a specific Pokemon. 
 
-## Submission
-- Send the link to the repo containing your code in the #gt-bootcamp-dev Slack channel (there will be a thread for this later)
-- Create a less than 3 minute video walkthrough of your API, Video Walkthrough: https://youtu.be/Wq_RztRnZPI
-
-## Requirements
-- Must accurately represent the demo
-- Must use Next.js
-- Must have specified endpoints
-- Must use the free PokeAPI
-
 ### API Endpoints
 **Subject to change -> may add more endpoints if ya'll think this is too easy**.
 
