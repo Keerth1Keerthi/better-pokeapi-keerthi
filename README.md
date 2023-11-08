@@ -3,8 +3,6 @@
 A backend that abstracts some aspects and combines features of the PokeAPI. For instance, an endpoint that just gets the name, image, and type of a specific Pokemon. 
 
 ### API Endpoints
-**Subject to change -> may add more endpoints if ya'll think this is too easy**.
-
 All API endpoints exist in the `pages/api` folder of the Next.js project.
 ```http
 GET /
