@@ -1,4 +1,4 @@
-# Project 1 - The Better PokeAPI™️
+# The Better PokeAPI™️
 
 A backend that abstracts some aspects and combines features of the PokeAPI. For instance, an endpoint that just gets the name, image, and type of a specific Pokemon. 
 
